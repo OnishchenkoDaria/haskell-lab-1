@@ -1,5 +1,6 @@
-module Main (main) where
+module Main where
+
+import ConnectDB (testQuery)
 
 main :: IO ()
-main = do
-  putStrLn "hello world"
+main = testQuery

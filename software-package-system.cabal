@@ -23,7 +23,6 @@ executable software-package-system
                        text,
                        bytestring,
                        time,
-                       regex-tdfa,
                        mysql-simple
   ghc-options:         -Wall
                        -Wcompat
