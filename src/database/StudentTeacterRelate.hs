@@ -1,3 +1,11 @@
+{-# LANGUAGE OverloadedStrings #-}
+
+module Database.StudentTeacherRelate
+  ( insertRelation
+  ) where
+
+import Database.SQLite.Simple
+
 insertRelation :: Connection -> Int -> Int -> IO ()
 insertRelation conn studentId teacherId = do
     _ <- execute conn

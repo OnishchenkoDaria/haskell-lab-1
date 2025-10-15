@@ -1,3 +1,12 @@
+{-# LANGUAGE OverloadedStrings #-}
+
+module Database.SoftwarePackages
+  ( insertSoftwarePackage
+  , updateSoftwarePackage
+  ) where
+
+import Database.SQLite.Simple
+
 insertSoftwarePackage :: Connection -> String -> String -> String -> Int -> String -> IO ()
 insertSoftwarePackage conn title desc version authorId authorType = do
     _ <- execute conn

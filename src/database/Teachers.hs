@@ -1,3 +1,12 @@
+{-# LANGUAGE OverloadedStrings #-}
+
+module Database.Teachers
+  ( insertTeacher
+  , updateTeacher
+  ) where
+
+import Database.SQLite.Simple
+
 insertTeacher :: Connection -> String -> String -> String -> IO ()
 insertTeacher conn name department email = do
     _ <- execute conn
