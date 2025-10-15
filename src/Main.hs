@@ -1,6 +1,6 @@
 module Main where
 
-import SQL.TablesInit (initDB)
+import TestDB (runTestMenu)
 
 main :: IO ()
-main = initDB
+main = runTestMenu

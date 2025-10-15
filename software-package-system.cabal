@@ -19,7 +19,16 @@ executable software-package-system
   hs-source-dirs:      src
   main-is:             Main.hs
   other-modules:       Database.ConnectDB
+                       Database.Demonstrations
+                       Database.Seminars
+                       Database.SoftwarePackages
+                       Database.Students
+                       Database.Teachers
+                       Database.Tests
+                       Database.StudentTeacherRelate
+                       Database.Helpers
                        SQL.TablesInit
+                       TestDB
   default-language:    Haskell2010
   build-depends:       base >= 4.7 && < 5,
                        text,
