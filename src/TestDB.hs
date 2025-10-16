@@ -18,6 +18,7 @@ import Database.Tests
 import Data.Time.Calendar (Day, fromGregorian)
 import Control.Monad (forever)
 import System.IO (hFlush, stdout)
+import System.Exit (exitSuccess)
 
 -- | Read a line from console with prompt
 prompt :: String -> IO String
@@ -135,5 +136,5 @@ runTestMenu = do
             "0" -> do
                 putStrLn "Exiting..."
                 close conn
-                return ()
+                exitSuccess
             _ -> putStrLn "Invalid choice, try again."
