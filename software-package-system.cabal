@@ -45,6 +45,35 @@ executable software-package-system
                        -Wpartial-fields
                        -Wredundant-constraints
 
+executable test-all-methods
+  hs-source-dirs:      src
+  main-is:             TestAllMethodsMain.hs
+  other-modules:       Database.ConnectDB
+                       Database.Demonstrations
+                       Database.Seminars
+                       Database.SoftwarePackages
+                       Database.Students
+                       Database.Teachers
+                       Database.Tests
+                       Database.StudentTeacherRelate
+                       Database.Helpers
+                       SQL.TablesInit
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5,
+                       text,
+                       bytestring,
+                       time,
+                       sqlite-simple ^>=0.4
+  ghc-options:         -Wall
+                       -Wcompat
+                       -Widentities
+                       -Wincomplete-record-updates
+                       -Wincomplete-uni-patterns
+                       -Wmissing-export-lists
+                       -Wmissing-home-modules
+                       -Wpartial-fields
+                       -Wredundant-constraints
+
 source-repository head
   type:     git
   location: https://github.com/githubuser/software-package-system

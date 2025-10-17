@@ -7,9 +7,8 @@ module SQL.TablesInit
 import Database.SQLite.Simple
 import Database.ConnectDB
 
-initDB :: IO ()
-initDB = do
-    conn <- connectDB
+initDB :: Connection -> IO ()
+initDB conn = do
 
     -- Students
     execute_ conn $
