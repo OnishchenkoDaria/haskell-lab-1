@@ -48,7 +48,8 @@ executable software-package-system
 executable test-all-methods
   hs-source-dirs:      src
   main-is:             TestAllMethodsMain.hs
-  other-modules:       Database.ConnectDB
+  other-modules:       TestAllMethods
+                       Database.ConnectDB
                        Database.Demonstrations
                        Database.Seminars
                        Database.SoftwarePackages
